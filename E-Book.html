@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toko E-Book</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #c40000;
+      color: white;
+      padding: 10px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav {
+      background-color: #eee;
+      padding: 10px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    nav input[type="text"] {
+      padding: 5px;
+      flex-grow: 1;
+    }
+    nav button {
+      background-color: #c40000;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .banner {
+      background-color: #ffe4e4;
+      color: #333;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .banner h2 {
+      margin: 0 0 10px;
+    }
+    .banner button {
+      background-color: #c40000;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .section {
+      padding: 40px 20px;
+      background-color: white;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .categories, .products, .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .btn {
+      background-color: #c40000;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 200px;
+    height: 510px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+    .testimonial-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #c40000;
+      color: white;
+      padding: 30px 20px;
+    }
+    footer .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .products, .categories, .testimonials {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>eBookStore</h1>
+</header>
+
+<nav>
+  <input type="text" placeholder="Cari Judul E-Book...">
+  <button>Cari</button>
+</nav>
+
+<div class="banner">
+  <h2>Pre Order E-Book Terbaru!</h2>
+  <p>Diskon 15% & Bonus E-Book Eksklusif</p>
+  <button onclick="window.open('https://wa.me/6281391233900?text=Halo%2C%20saya%20tertarik%20dengan%20Pre%20Order%20E-Book%20terbaru', '_blank')">Beli Sekarang</button>
+</div>
+
+<section class="section">
+  <h2>Kategori E-Book</h2>
+  <div class="categories">
+    <button class="btn">Motivasi</button>
+    <button class="btn">Fiksi</button>
+    <button class="btn">Nonfiksi</button>
+    <button class="btn">Pengembangan Diri</button>
+    <button class="btn">Religi</button>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Special Offer & Pre Order</h2>
+  <div class="products">
+    <div class="product-card">
+      <img src="gambar.jpg" alt="E-book 1">
+      <h3>Bangkit Lagi – Kisah Nyata dari Kegagalan ke Keberhasilan</h3>
+      <p>Rp5.000,00</p>
+      <a class="btn" href="Bangkit Lagi – Kisah Nyata dari Kegagalan ke Keberhasilan.html" target="_blank">Lihat</a>
+    </div>
+    <div class="product-card">
+      <img src="gambar2.jpg" alt="Ebook 2">
+      <h3>Hidup Gak Selalu Lurus, Tapi Bisa Tetap Lanjut</h3>
+      <p>Rp5.000,00</p>
+      <a class="btn" href="Hidup Gak Selalu Lurus, Tapi Bisa Tetap Lanjut.html" target="_blank">Lihat</a>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/150x220" alt="Ebook 3">
+      <h3>Doa & Harapan</h3>
+      <p>Pre Order</p>
+      <a class="btn" href="Doa & Harapan.html" target="_blank">Lihat</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background-color:#f9f9f9;">
+  <h2>Apa Kata Pembaca</h2>
+  <div class="testimonials">
+    <div class="testimonial-card">
+      <p>"E-booknya ringan dibaca, penuh makna. Ngebantu banget pas lagi down."</p>
+      <strong>- Andi</strong>
+    </div>
+    <div class="testimonial-card">
+      <p>"Proses beli gampang, bisa langsung download. Mantap!"</p>
+      <strong>- Sinta</strong>
+    </div>
+    <div class="testimonial-card">
+      <p>"Banyak pilihan buku inspiratif. Recommended banget!"</p>
+      <strong>- Riko</strong>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div>
+      <h3>eBookStore</h3>
+      <p>Tempat terbaik untuk cari bacaan digital berkualitas.</p>
+    </div>
+    <div>
+      <h4>Kontak Kami</h4>
+      <p>Email: info@ebookstore.id</p>
+      <p>WA: 081391233900</p>
+    </div>
+    <div>
+      <h4>Ikuti Kami</h4>
+      <p>Instagram: @ariefyunant_</p>
+      <p>Facebook: EbookStore Indonesia</p>
+    </div>
+  </div>
+  <p style="text-align: center; margin-top: 20px;">&copy; 2025 eBookStore. All rights reserved.</p>
+
+
+  
+
+
+
+  
+    
